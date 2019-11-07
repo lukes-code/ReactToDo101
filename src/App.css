@@ -19,8 +19,15 @@ body{
   background-color: #464646;
 }
 
-.container{
+.container {
   padding: 0 1rem;
+  background-color: #212121;
+  width: 90%;
+  margin: 20px auto;
+  border-radius: 10px;
+  min-height: 700px;
+  padding: 30px;
+  box-shadow: 0 20px 30px rgba(0,0,0,0.19), 0 12px 12px rgba(0,0,0,0.23);
 }
 
 .btn{
@@ -35,3 +42,16 @@ body{
 .btn:hover{
   background: #666;
 }
+
+.TodoItems{
+  width: 50%;
+  margin: 0 auto;
+}
+
+@media (max-width: 992px){
+  .TodoItems{
+      width: 90%;
+      margin: 0 auto;
+    }
+}
+
