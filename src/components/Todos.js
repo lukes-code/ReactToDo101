@@ -3,9 +3,6 @@ import TodoItem from './Todoitem';
 import PropTypes from 'prop-types';
 
 class Todos extends Component {
-    markComplete = () => {
-
-    }
     render(){
         return this.props.todos.map((todo) => (
             <div className="TodoItems">

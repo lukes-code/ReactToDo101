@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from './components/layout/Header';
 import Todos from './components/Todos'
 import AddTodo from './components/layout/AddToDo'
-// import uuid from 'uuid'
+import uuid from 'uuid'
 import About from './components/pages/About'
 import './App.css';
 import axios from 'axios';
@@ -29,17 +29,17 @@ class App extends Component {
 
   // Delete Todo
   delTodo = (id) => {
-    axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`)
-      .then(res => this.setState({ todos: [...this.state.todos.filter(todo => todo.id !== id)] }))
+    this.setState({ todos: [...this.state.todos.filter(todo => todo.id !== id)] });
     
   }
 
   addTodo = (title) => {
-    axios.post('https://jsonplaceholder.typicode.com/todos', {
+    const newTodo = {
+    id: uuid.v4(),
     title,
     completed: false
-    })
-      .then(res => this.setState({ todos: [...this.state.todos, res.data] }));
+    }
+      this.setState({ todos: [...this.state.todos, newTodo] });
   }
 
   render() {
@@ -52,6 +52,7 @@ class App extends Component {
               <React.Fragment>
                 <AddTodo addTodo={this.addTodo}/>
                 <Todos 
+                key={this.addId}
                 todos={this.state.todos}
                 markComplete={this.markComplete}
                 delTodo={this.delTodo}

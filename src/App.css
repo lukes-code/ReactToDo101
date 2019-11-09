@@ -40,6 +40,11 @@ body{
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   box-shadow: 0 20px 30px rgba(0,0,0,0.19), 0 12px 12px rgba(0,0,0,0.23);
+  transition: all 0.3s ease;
+}
+
+.btn:focus{
+  outline: none;
 }
 
 .btn:hover{
@@ -68,14 +73,18 @@ body{
 
 .formStyle{
   display: flex;
-  width: 75%;
-  margin: 0 auto;
+  width: 49%;
+  margin: 15px auto;
+}
+
+@media (max-width: 992px){
+  .formStyle{
+    width: 85%;
+  }
 }
 
 @media (max-width: 500px){
-  .formStyle{
-    width: 100%;
-  }
+  
   .headerStyle{
     width: 100%;
   }
@@ -83,9 +92,13 @@ body{
 
 .addInput{
     flex: 10 1 0%;
-    padding: 5px;
+    padding: 8px 20px;
     border-top-left-radius: 15px;
     border: none;
     box-shadow: 0 20px 30px rgba(0,0,0,0.19), 0 12px 12px rgba(0,0,0,0.23);
     border-bottom-left-radius: 15px;
+}
+
+input.addInput:focus {
+  outline: none;
 }

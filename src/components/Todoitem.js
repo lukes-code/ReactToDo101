@@ -7,17 +7,16 @@ export class TodoItem extends Component{
         return {
             background: 'f4f4f4',
             padding: '10px',
-            border: '1px #ccc solid',
             borderRadius: '10px',
             margin: '10px',
-            textDecoration: this.props.todo.completed ? 
-            'line-through' : 'none',
+            transition: 'all 0.4s ease',
+            background: this.props.todo.completed ? 
+            '#2c5629' : '#212121',
             padding: '10px',
-            border: '2px solid #464646',
             bordeRadius: '10px',
             margin: '10px',
             texDecoration: 'none',
-            boxShadow: '0 20px 30px rgba(0,0,0,0.19), 0 12px 12px rgba(0,0,0,0.23)',
+            boxShadow: '0px 10px 30px rgba(0,0,0,0.39), 0px 7px 20px rgba(0,0,0,0.43)',
         }
     }
 
@@ -25,7 +24,7 @@ export class TodoItem extends Component{
         const { id, title } = this.props.todo;
         return (
             <div style={this.getStyle()}>
-                <input type="checkbox" onChange={this.props.markComplete.bind(this, id)} /> {' '}
+                <input type="checkbox" onChange={this.props.markComplete.bind(this, id)} id={this, id} /> {' '}
                 { title }
                 <button onClick={this.props.delTodo.bind(this, id)} style={btnStyle}>x</button>
             </div>
