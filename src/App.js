@@ -46,7 +46,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <div className="container">
+          <div style={container} className="container">
             <Header />
             <Route exact path="/" render={props => (
               <React.Fragment>
@@ -65,6 +65,10 @@ class App extends Component {
       </Router>
     );
   }
+}
+
+const container = {
+  background: '#212121',
 }
 
 export default App;
