@@ -12,8 +12,14 @@ export class AddTodo extends Component {
 
     onSubmit = (e) => {
         e.preventDefault();
-        this.props.addTodo(this.state.title);
-        this.setState({ title: '' });
+        let x = document.getElementById('input');
+        if(x.value == ''){
+            x.placeholder = 'Please enter more than one character...';
+        } else{
+            this.props.addTodo(this.state.title);
+            this.setState({ title: '' });
+            x.placeholder = 'Add Todo...';
+        }
     }
 
     render() {
@@ -22,6 +28,9 @@ export class AddTodo extends Component {
                 <input 
                     type="text" 
                     name="title" 
+                    minlength='1'
+                    maxlength='35'
+                    id="input"
                     className="addInput"
                     placeholder="Add Todo..."
                     value={this.state.title}

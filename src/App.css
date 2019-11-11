@@ -107,10 +107,15 @@ input.addInput:focus {
 .delBtn{
   flex: 1;
   margin: 10px 10px 10px 0px;
-  background: red;
+  background: #981515;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.delBtn:hover{
+  background: #b51818;
 }
 
 .todoBox{
@@ -118,7 +123,7 @@ input.addInput:focus {
   padding: 10px;
   border-radius: 10px;
   margin: 10px;
-  transition: all 0.4s ease;;
+  transition: all 0.3s ease;;
   padding: 10px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -128,5 +133,9 @@ input.addInput:focus {
   box-shadow: 0px 10px 30px rgba(0,0,0,0.39), 0px 7px 20px rgba(0,0,0,0.43);
   flex: 10;
   margin: 10px 0px 10px 10px;
+}
+
+.todoBox:hover{
+  background: rgb(45, 45, 45) !important;
 }
 

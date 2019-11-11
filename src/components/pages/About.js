@@ -5,7 +5,6 @@ function About(){
         <div
         style={{ textAlign: 'center', marginTop: '50px' }}
         >
-            <h1>About</h1>
             <p>This to do app was made with React.</p>
             <p>It also uses placeholder to do list items by get request from "JSONPlaceholder", a fake online REST API</p>
         </div>
