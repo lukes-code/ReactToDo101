@@ -410,3 +410,12 @@ html {
     font-size: 11px;
   }
 }
+
+@media screen and (max-width: 500px){
+  .addInput{
+    padding: 8px 10px;
+  }
+  .btn{
+    padding: 7px 10px;
+  }
+}
